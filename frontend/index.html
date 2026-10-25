@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandShield AI — AI-Powered Brand & Phishing Protection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-home">
+
+    <nav class="navbar" id="navbar" aria-label="Primary">
+        <div class="nav-container">
+            <a href="#home" class="logo">BrandShield <span>AI</span></a>
+            <div class="menu-icon" id="menu-icon" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">Process</a></li>
+                <li><a href="#ai-explain">AI</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#detection">Scan</a></li>
+                <li><a href="#testimonials">Stories</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="dashboard.html" id="nav-dashboard" style="display: none;">Dashboard</a></li>
+                <li><a href="auth.html" id="nav-auth" class="btn-primary nav-btn">Login</a></li>
+                <li><a href="#" id="nav-logout" class="btn-secondary nav-btn" style="display: none;">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-inner container">
+            <div class="hero-content fade-in-up">
+                <p class="hero-eyebrow">Enterprise-grade brand intelligence</p>
+                <h1>Protect your brand with <span class="accent-gold">AI-driven</span> threat detection</h1>
+                <p class="hero-lead">Identify phishing sites, look-alike domains, and impersonation risks before they reach your customers. BrandShield AI combines heuristic analysis, scoring, and transparent reasoning in one streamlined workflow.</p>
+                <div class="hero-cta-row">
+                    <a href="#detection" class="btn-primary btn-large">Start free scan</a>
+                    <a href="#how-it-works" class="btn-secondary btn-large hero-cta-secondary">See how it works</a>
+                </div>
+                <ul class="hero-trust fade-in-up delay-1" aria-label="Highlights">
+                    <li><strong>Real-time</strong> URL analysis</li>
+                    <li><strong>Explainable</strong> risk factors</li>
+                    <li><strong>Secure</strong> Spring Boot + Python pipeline</li>
+                </ul>
+            </div>
+        </div>
+        <a href="#features" class="hero-scroll-hint fade-in-up delay-2" aria-label="Scroll to features">Scroll<span class="hero-scroll-icon"></span></a>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features section">
+        <div class="container">
+            <header class="section-header fade-in-up">
+                <p class="section-label">Capabilities</p>
+                <h2 class="section-title">Everything you need to stay ahead</h2>
+                <p class="section-subtitle">From instant scans to audit-ready outputs, BrandShield AI is built for security teams, brand managers, and compliance stakeholders.</p>
+            </header>
+            <div class="cards-grid cards-grid-6">
+                <article class="card fade-in-up delay-1">
+                    <span class="card-icon" aria-hidden="true">◈</span>
+                    <h3>Phishing &amp; fake site detection</h3>
+                    <p>Surface high-risk URLs using multi-signal heuristics including protocol hygiene, structural anomalies, and keyword patterns tied to social engineering.</p>
+                </article>
+                <article class="card fade-in-up delay-2">
+                    <span class="card-icon" aria-hidden="true">◎</span>
+                    <h3>Domain &amp; impersonation awareness</h3>
+                    <p>Spot look-alike domains and suspicious naming tactics that attackers use to hijack trust in your brand ecosystem.</p>
+                </article>
+                <article class="card fade-in-up delay-3">
+                    <span class="card-icon" aria-hidden="true">▣</span>
+                    <h3>Explainable scoring</h3>
+                    <p>Every verdict includes a numeric risk score and human-readable reasons so analysts can justify decisions without a black box.</p>
+                </article>
+                <article class="card fade-in-up delay-4">
+                    <span class="card-icon" aria-hidden="true">⚡</span>
+                    <h3>Fast API-backed workflow</h3>
+                    <p>A modern REST API connects your web experience to a dedicated AI service—ideal for demos, pilots, and future automation.</p>
+                </article>
+                <article class="card fade-in-up delay-1">
+                    <span class="card-icon" aria-hidden="true">◇</span>
+                    <h3>Session-aware history</h3>
+                    <p>Authenticated users retain a structured scan history for trend review and stakeholder reporting.</p>
+                </article>
+                <article class="card fade-in-up delay-2">
+                    <span class="card-icon" aria-hidden="true">✦</span>
+                    <h3>Built for growth</h3>
+                    <p>Swap in richer models or data sources behind the same contract—your product surface stays consistent.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="how-it-works section bg-dark text-light">
+        <div class="container">
+            <header class="section-header fade-in-up">
+                <p class="section-label text-dim">Process</p>
+                <h2 class="section-title">How it works, step by step</h2>
+                <p class="section-subtitle text-dim">A clear pipeline from user input to actionable intelligence—no guesswork.</p>
+            </header>
+            <ol class="steps-timeline">
+                <li class="step-item fade-in-up delay-1">
+                    <span class="step-num">1</span>
+                    <div class="step-body">
+                        <h3>Submit a URL</h3>
+                        <p>Users enter any URL or hostname from the live scanner. The frontend sends a JSON payload to the BrandShield API over HTTPS-ready infrastructure.</p>
+                    </div>
+                </li>
+                <li class="step-item fade-in-up delay-2">
+                    <span class="step-num">2</span>
+                    <div class="step-body">
+                        <h3>Backend validates &amp; orchestrates</h3>
+                        <p>Spring Boot authenticates the request shape, associates optional user context, and forwards a normalized analysis job to the AI microservice.</p>
+                    </div>
+                </li>
+                <li class="step-item fade-in-up delay-3">
+                    <span class="step-num">3</span>
+                    <div class="step-body">
+                        <h3>AI service analyzes</h3>
+                        <p>The Python engine evaluates TLS usage, length and complexity signals, and linguistic triggers—aggregating evidence into a score and verdict.</p>
+                    </div>
+                </li>
+                <li class="step-item fade-in-up delay-4">
+                    <span class="step-num">4</span>
+                    <div class="step-body">
+                        <h3>Results persist &amp; display</h3>
+                        <p>SAFE or FAKE, score, and enumerated reasons return through the API, render in the UI, and save to history for logged-in accounts.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- AI explanation -->
+    <section id="ai-explain" class="ai-explain section">
+        <div class="container">
+            <div class="ai-split">
+                <div class="ai-copy fade-in-up">
+                    <p class="section-label">Under the hood</p>
+                    <h2 class="section-title section-title-left">What our AI is actually measuring</h2>
+                    <p class="section-subtitle section-subtitle-left">BrandShield AI is designed to be <strong>transparent</strong>: you always see which factors influenced the outcome. The system prioritizes interpretability so security teams can train staff and tune policies.</p>
+                    <ul class="ai-points">
+                        <li><strong>Transport security</strong> — Non-HTTPS entry points are flagged because encryption is a baseline expectation for legitimate services.</li>
+                        <li><strong>Structural signals</strong> — Unusually long or noisy URLs can correlate with automated campaigns and cloaked redirects.</li>
+                        <li><strong>Language cues</strong> — High-risk terms often appear in phishing lures; we surface matches without claiming certainty on any single word.</li>
+                        <li><strong>Thresholded verdict</strong> — Evidence is summed into a capped score; crossing the policy threshold yields FAKE, otherwise SAFE—documented in every response.</li>
+                    </ul>
+                    <a href="#detection" class="btn-primary">Try the analyzer</a>
+                </div>
+                <div class="ai-panel fade-in-up delay-1">
+                    <div class="ai-panel-card">
+                        <h3>Response shape</h3>
+                        <pre class="ai-code" aria-label="Example JSON response"><code>{
+  "result": "SAFE | FAKE",
+  "score": 0–100,
+  "reasons": ["…", "…"]
+}</code></pre>
+                        <p class="ai-panel-note">Same contract end-to-end: Python → API → dashboard &amp; history.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="benefits section bg-subtle">
+        <div class="container">
+            <header class="section-header fade-in-up">
+                <p class="section-label">Why teams choose us</p>
+                <h2 class="section-title">Benefits that compound</h2>
+                <p class="section-subtitle">Reduce incident volume, shorten triage, and strengthen customer trust with a single, coherent workflow.</p>
+            </header>
+            <div class="benefits-grid">
+                <div class="benefit-item fade-in-up delay-1">
+                    <span class="benefit-stat">↓</span>
+                    <h3>Lower mean time to detect</h3>
+                    <p>Instant scans cut manual lookup time and help tier-one analysts escalate only what matters.</p>
+                </div>
+                <div class="benefit-item fade-in-up delay-2">
+                    <span class="benefit-stat">✓</span>
+                    <h3>Audit-friendly outputs</h3>
+                    <p>Timestamped results and explicit rationales support post-incident reviews and regulatory narratives.</p>
+                </div>
+                <div class="benefit-item fade-in-up delay-3">
+                    <span class="benefit-stat">◎</span>
+                    <h3>Consistent brand narrative</h3>
+                    <p>Align marketing, legal, and security around the same vocabulary: score, verdict, and reasons.</p>
+                </div>
+                <div class="benefit-item fade-in-up delay-4">
+                    <span class="benefit-stat">↗</span>
+                    <h3>Future-proof architecture</h3>
+                    <p>Decoupled services mean you can deepen models or add threat feeds without rewriting the entire stack.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Detection -->
+    <section id="detection" class="detection section">
+        <div class="container">
+            <header class="section-header fade-in-up">
+                <p class="section-label">Live demo</p>
+                <h2 class="section-title">Run a scan in seconds</h2>
+                <p class="section-subtitle">Sign in to analyze websites, social profiles, or product links. Paste a URL or handle; the AI classifies the source automatically and learns from your past scans (Symmetric AI).</p>
+            </header>
+            <div class="detection-box fade-in-up">
+                <p class="symmetric-ai-hint" role="note">Symmetric AI cycle: detect signals, analyze risk, act on the verdict, and learn by reusing patterns from your stored history (no external APIs).</p>
+                <p id="detection-auth-notice" class="detection-auth-notice hidden" role="status">
+                    <strong>Login required to scan URLs.</strong>
+                    <a href="auth.html" class="detection-auth-link">Sign in</a> or create an account to use the analyzer.
+                </p>
+                <form id="detect-form" class="detect-form-grid">
+                    <div class="detect-field detect-field-full">
+                        <label for="detect-source-type" class="detect-label">Select type</label>
+                        <select id="detect-source-type" name="sourceType" class="detect-select" aria-label="What you are analyzing">
+                            <option value="WEBSITE">Website</option>
+                            <option value="SOCIAL_MEDIA">Social media</option>
+                            <option value="PRODUCT">Product link</option>
+                        </select>
+                    </div>
+                    <div class="detect-row-input">
+                        <div class="detect-field detect-field-grow">
+                            <label for="url-input" class="detect-label">URL or username</label>
+                            <input type="text" id="url-input" name="url" inputmode="url" autocomplete="url" placeholder="e.g. https://example.com, instagram.com/user, amazon.in/dp/…" required aria-label="URL or username to analyze">
+                        </div>
+                        <div class="detect-field detect-field-btn">
+                            <label class="detect-label detect-label-spacer" aria-hidden="true">&nbsp;</label>
+                            <button type="submit" id="btn-analyze" class="btn-primary btn-analyze-full">Analyze</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="loading-wrap" class="loading-wrap hidden" aria-live="polite" aria-busy="false">
+                    <div id="loading" class="loading-spinner" aria-hidden="true"></div>
+                    <p class="loading-text">Analyzing…</p>
+                </div>
+                <div id="result-box" class="result-box hidden" role="status">
+                    <p id="result-source-type" class="result-source-type hidden" aria-label="Detected source"></p>
+                    <p id="symmetric-ai-banner" class="symmetric-ai-banner hidden" role="status" aria-live="polite"></p>
+                    <div class="result-header">
+                        <div class="result-title-row">
+                            <span class="result-prefix">Verdict</span>
+                            <h3 id="result-text" class="result-verdict"></h3>
+                        </div>
+                        <span id="score-indicator" class="score">Score: <span id="score-value"></span>/100</span>
+                    </div>
+                    <div class="score-bar-wrap" id="score-bar-wrap" aria-hidden="true">
+                        <div class="score-bar-label-row">
+                            <span>0</span>
+                            <span>Risk level</span>
+                            <span>100</span>
+                        </div>
+                        <div class="score-bar-track">
+                            <div id="score-bar-fill" class="score-bar-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <ul id="reasons-list" class="reasons-list"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section id="stats" class="stats section bg-charcoal text-light">
+        <div class="container stats-grid pb-2">
+            <div class="stat-item fade-in-up">
+                <h2 class="counter" data-target="15000">0</h2>
+                <p>URLs analyzed</p>
+            </div>
+            <div class="stat-item fade-in-up delay-1">
+                <h2 class="counter" data-target="99">0</h2><span class="stat-suffix">%</span>
+                <p>Heuristic precision*</p>
+            </div>
+            <div class="stat-item fade-in-up delay-2">
+                <h2 class="counter" data-target="24">0</h2><span class="stat-suffix">/7</span>
+                <p>Always-on monitoring</p>
+            </div>
+        </div>
+        <p class="stats-footnote container text-dim">*Illustrative metric for product storytelling; tune to your validated benchmarks.</p>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <header class="section-header fade-in-up">
+                <p class="section-label">Customer voices</p>
+                <h2 class="section-title">Trusted by security-minded teams</h2>
+                <p class="section-subtitle">Representative feedback from organizations piloting AI-assisted brand protection workflows.</p>
+            </header>
+            <div class="carousel fade-in-up" id="testimonial-carousel" aria-roledescription="carousel">
+                <button type="button" class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous testimonial">‹</button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carousel-track">
+                        <blockquote class="carousel-slide">
+                            <p>“We finally have a single place to paste suspicious links and get a defensible rationale. Onboarding new analysts became much faster.”</p>
+                            <footer><cite>Jordan M.</cite><span class="carousel-role">Director of IT Security, FinTech</span></footer>
+                        </blockquote>
+                        <blockquote class="carousel-slide">
+                            <p>“The score plus reasons format is exactly what our legal team asks for after a phishing spike. It keeps everyone aligned.”</p>
+                            <footer><cite>Priya S.</cite><span class="carousel-role">Brand &amp; Compliance Lead</span></footer>
+                        </blockquote>
+                        <blockquote class="carousel-slide">
+                            <p>“API-first design was the selling point. We started with the web demo and are now wiring the same contract into our SOC playbooks.”</p>
+                            <footer><cite>Alex R.</cite><span class="carousel-role">SOC Manager, SaaS</span></footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <button type="button" class="carousel-btn carousel-next" id="carousel-next" aria-label="Next testimonial">›</button>
+                <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Testimonial slides"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq section bg-subtle">
+        <div class="container container-narrow">
+            <header class="section-header fade-in-up">
+                <p class="section-label">FAQ</p>
+                <h2 class="section-title">Common questions</h2>
+                <p class="section-subtitle">Straight answers about how BrandShield AI fits into your risk program.</p>
+            </header>
+            <div class="faq-list fade-in-up" id="faq-list">
+                <div class="faq-item">
+                    <button type="button" class="faq-trigger" aria-expanded="false" id="faq-btn-0" aria-controls="faq-panel-0">
+                        <span>Is BrandShield AI a replacement for a full phishing takedown service?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-0" role="region" aria-labelledby="faq-btn-0" hidden>
+                        <p>No. It accelerates triage and documentation. For enforcement and registrar workflows, pair it with your existing abuse and legal processes.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-trigger" aria-expanded="false" id="faq-btn-1" aria-controls="faq-panel-1">
+                        <span>What data leaves my browser?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" hidden>
+                        <p>The scanner sends the URL you submit (and an optional user identifier when logged in) to the BrandShield API. Do not submit highly sensitive internal URLs if your policy forbids it.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-trigger" aria-expanded="false" id="faq-btn-2" aria-controls="faq-panel-2">
+                        <span>How accurate is the SAFE / FAKE verdict?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>
+                        <p>Verdicts follow a documented scoring policy. Accuracy depends on your threat landscape and any customizations you add. Use outputs as decision support, not sole legal proof.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button type="button" class="faq-trigger" aria-expanded="false" id="faq-btn-3" aria-controls="faq-panel-3">
+                        <span>Can we host everything on-prem?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>
+                        <p>The reference architecture is split across a Spring Boot service and a Python AI worker for clarity. Enterprise deployments can containerize both and run them entirely inside your perimeter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-copy fade-in-up">
+                    <p class="section-label">Contact</p>
+                    <h2 class="section-title section-title-left">Let’s protect your brand together</h2>
+                    <p class="section-subtitle section-subtitle-left">Share your use case, expected volume, and integration targets. We respond within two business days for pilot inquiries.</p>
+                    <ul class="contact-details">
+                        <li><strong>Email</strong><a href="mailto:hello@brandshield.ai">hello@brandshield.ai</a></li>
+                        <li><strong>Demo</strong><span>Book a walkthrough of the API and dashboard</span></li>
+                        <li><strong>HQ</strong><span>Global — remote-first engineering</span></li>
+                    </ul>
+                </div>
+                <form class="contact-form fade-in-up delay-1" id="contact-form" novalidate>
+                    <div class="input-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" autocomplete="name" required placeholder="Your name">
+                    </div>
+                    <div class="input-group">
+                        <label for="contact-email">Work email</label>
+                        <input type="email" id="contact-email" name="email" autocomplete="email" required placeholder="you@company.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="contact-msg">How can we help?</label>
+                        <textarea id="contact-msg" name="message" rows="4" required placeholder="Tell us about your brand protection goals…"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Send message</button>
+                    <p class="contact-form-note" id="contact-form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo">BrandShield <span>AI</span></span>
+                <p>Explainable AI for brand and phishing defense.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer">
+                <a href="#features">Features</a>
+                <a href="#detection">Scan</a>
+                <a href="#faq">FAQ</a>
+                <a href="auth.html">Account</a>
+            </nav>
+            <p class="footer-copy">&copy; 2026 BrandShield AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    <script>
+        setupCounters();
+        setupDetectionForm();
+        updateNavAuth();
+        initHomePageEnhancements();
+    </script>
+</body>
+</html>

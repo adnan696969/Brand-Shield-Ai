@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandShield AI - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Chart.js for optional charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-light">
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">BrandShield <span>AI</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#detection">Detection</a></li>
+                <li id="user-greeting" style="font-weight: 600; color: var(--gold);"></li>
+                <li><a href="#" id="nav-logout" class="btn-secondary">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard-section section">
+        <div class="container fade-in-up">
+            <div class="dashboard-head">
+                <h2 class="section-title" style="margin-bottom: 0.5rem;">Dashboard</h2>
+                <p class="dashboard-lead">Review your scan history or run a new analysis. Rows highlighted with <strong>Repeat pattern</strong> match a fingerprint seen before with a risky verdict (Symmetric AI).</p>
+                <a href="index.html#detection" class="btn-primary dashboard-scan-cta">Run new scan</a>
+            </div>
+            <div class="dashboard-grid">
+                <!-- History Table -->
+                <div class="dashboard-card history-card">
+                    <h3>Scan History</h3>
+                    <div class="table-responsive">
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>URL</th>
+                                    <th>Type</th>
+                                    <th>Result</th>
+                                    <th>Risk Score</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="history-body">
+                                <tr><td colspan="5">Loading...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Chart Summary -->
+                <div class="dashboard-card chart-card">
+                    <h3>Overview</h3>
+                    <canvas id="overviewChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const user = checkAuth();
+            if(!user) return; // checkAuth will redirect
+            
+            document.getElementById("user-greeting").textContent = "Hi, " + user.name;
+            
+            // Set up logout button specifically since navbar is modified
+            const logoutBtn = document.getElementById("nav-logout");
+            if(logoutBtn) {
+                logoutBtn.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    logout();
+                });
+            }
+            
+            loadDashboardHistory();
+        });
+    </script>
+</body>
+</html>
